@@ -10,7 +10,7 @@ import torch
 import torchvision.transforms as transforms
 
 # Load the model
-model_hub_url = 'https://github.com/Ravi-kumar-mishra/Machine-learning'
+model_hub_url = 'Ravi-kumar-mishra/Machine-learning/master/model.pth'
 model_name = 'model.pth'
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = torch.hub.load(model_hub_url, model_name)
