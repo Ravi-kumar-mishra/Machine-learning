@@ -9,11 +9,12 @@ from PIL import Image
 import torch
 import torchvision.transforms as transforms
 
-# Load the model from GitHub repository
+# Load the model
 model_hub_url = 'https://github.com/Ravi-kumar-mishra/Machine-learning'
 model_name = 'model.pth'
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model = torch.hub.load(model_hub_url, model_name, map_location=device)
+model = torch.hub.load(model_hub_url, model_name)
+model = model.to(device)
 model.eval()
 
 class_names = ['MildDemented', 'ModerateDemented', 'NonDemented', 'VeryMildDemented']
