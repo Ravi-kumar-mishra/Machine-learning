@@ -10,7 +10,7 @@ import torch
 import torchvision.transforms as transforms
 
 # Load the model
-model_path = r'C:\Users\ravik\Downloads\model.pth'
+model_path = r'https://github.com/Ravi-kumar-mishra/Machine-learning/blob/master/model.pth'
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = torch.load(model_path, map_location=device)
 model.eval()
