@@ -10,9 +10,9 @@ import torch
 import torchvision.transforms as transforms
 
 # Load the model from GitHub repository
-model_hub_url = 'https://github.com/Ravi-kumar-mishra/Machine-learning/raw/main/model.pth'
+model_hub_url = 'https://github.com/Ravi-kumar-mishra/Machine-learning/blob/master/model.pth'
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model = torch.hub.load_state_dict_from_url(model_hub_url, map_location=device)
+model = torch.hub.load_state_dict_from_url(model_hub_url)
 model.eval()
 
 class_names = ['MildDemented', 'ModerateDemented', 'NonDemented', 'VeryMildDemented']
